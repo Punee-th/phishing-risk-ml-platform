@@ -1,0 +1,57 @@
+{
+    "model_version": "1.1.0",
+    "model_type": "RandomForestClassifier",
+    "threshold": 0.5,
+    "positive_security_class": 0,
+    "label_mapping": {
+        "0": "phishing",
+        "1": "legitimate"
+    },
+    "feature_names": [
+        "url_length",
+        "domain_length",
+        "is_domain_ip",
+        "tld_length",
+        "subdomain_count",
+        "letter_count",
+        "letter_ratio",
+        "digit_count",
+        "digit_ratio",
+        "equals_count",
+        "question_mark_count",
+        "ampersand_count",
+        "is_https"
+    ],
+    "feature_count": 13,
+    "preprocessing_version": "canonical-v1",
+    "evaluation_strategy": "domain-grouped unseen-domain split",
+    "training_rows": 188173,
+    "testing_rows": 46514,
+    "metrics": {
+        "accuracy": 0.9671711742701122,
+        "phishing_precision": 0.9815012261435121,
+        "phishing_recall": 0.9397682609361442,
+        "phishing_f1": 0.9601814910427912
+    },
+    "confusion_matrix_labels": [
+        "phishing",
+        "legitimate"
+    ],
+    "confusion_matrix": [
+        [
+            18411,
+            1180
+        ],
+        [
+            347,
+            26576
+        ]
+    ],
+    "known_limitations": [
+        "Lexical URL features cannot inspect webpage content",
+        "HTTP URLs may receive excessively high phishing scores",
+        "Performance was measured primarily on the PhiUSIIL dataset",
+        "Independent external-dataset validation is still required",
+        "The score is not currently probability-calibrated"
+    ]
+}

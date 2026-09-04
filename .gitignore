@@ -1,0 +1,29 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# IDE settings
+.vscode/
+.idea/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Jupyter temporary files
+.ipynb_checkpoints/
